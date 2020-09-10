@@ -2,7 +2,6 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Menu from "../Navbar/MenuItems";
-import "./styles.css";
 
 class SideMenu extends React.Component {
   render() {
