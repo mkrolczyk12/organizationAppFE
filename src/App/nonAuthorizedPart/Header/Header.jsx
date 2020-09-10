@@ -3,12 +3,26 @@ import NavigationBar from "./Navbar/NavigationBar";
 
 class Header extends React.Component {
   state = {
-    sideMenu: true,
+    sideMenu: false,
   };
+
+  manageSideMenu = () => {
+    console.log(this.state.sideMenu);
+    this.setState({
+      sideMenu: !this.state.sideMenu,
+    });
+  };
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <>
-        <NavigationBar sideMenu={this.state.sideMenu} />
+        <NavigationBar
+          showSideMenu={this.manageSideMenu}
+          sideMenu={this.state.sideMenu}
+        />
         <div></div>
       </>
     );

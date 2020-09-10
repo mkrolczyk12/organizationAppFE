@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import "./styles.css";
 import app from "./App.css";
 
@@ -9,12 +14,17 @@ function App() {
   return (
     <div className={app}>
       <Router>
-        <Route path="/">
-          <StartPage />
-        </Route>
-        <Route path="/temp" exact>
-          <p>Workssss</p>
-        </Route>
+        <Switch>
+          <Route path="/temp" exact>
+            <p>temporary section page</p>
+          </Route>
+          <Route path="/">
+            <StartPage />
+          </Route>
+          <Route>
+            <Redirect to="/" />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

@@ -1,20 +1,19 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Navbar, Button } from "react-bootstrap";
+import { Navbar, Button, Nav } from "react-bootstrap";
 import Menu from "./MenuItems.jsx";
 import SideMenu from "../SideMenu/SideMenu";
 // import logo from "./logo.png";
 
 class NavigationBar extends React.Component {
-  state = {
-    sideMenu: false,
-  };
+  state = {};
 
-  showSideMenu = () => {
-    this.setState({
-      sideMenu: !this.state.sideMenu,
-    });
-  };
+  // showSideMenu = (props) => {
+  //   console.log(this.props.sideMenu);
+  //   this.setState({
+  //     sideMenu: !this.props.sideMenu,
+  //   });
+  // };
 
   render() {
     return (
@@ -24,8 +23,13 @@ class NavigationBar extends React.Component {
           <Navbar.Brand href="#home">
             <h1>MoneyApp</h1>
           </Navbar.Brand>
-          <Menu />
-          <Button className="m-2" variant="outline-primary">
+          <Nav className="flex-grow-1">
+            <Menu />
+          </Nav>
+          <Button
+            className="m-2 float-right flex-row"
+            variant="outline-primary"
+          >
             Zaloguj się
           </Button>
           <Button className="m-2" variant="outline-info">
@@ -38,8 +42,8 @@ class NavigationBar extends React.Component {
             className="btn btn-link btn-lg border-0"
             id="sidebarToggle"
             href="#"
-            variant="outline-info"
-            onClick={this.showSideMenu}
+            variant="outline-primary"
+            onClick={this.props.showSideMenu}
           >
             <i className="navbar-toggler-icon"></i>
           </Button>
@@ -56,7 +60,11 @@ class NavigationBar extends React.Component {
           </Button>
         </Navbar>
         {/* Side menu */}
-        {this.state.sideMenu ? <SideMenu /> : ""}
+        {this.props.sideMenu ? (
+          <SideMenu closeSideMenu={this.props.showSideMenu} />
+        ) : (
+          ""
+        )}
       </>
     );
   }

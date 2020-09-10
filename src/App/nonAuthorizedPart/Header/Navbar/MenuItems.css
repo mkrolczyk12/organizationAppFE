@@ -1,0 +1,20 @@
+/* #MobileMenu {
+
+} */
+
+#sideMenuLogo {
+    color: #5bc0de;
+    transition: 1s;
+}
+
+/* #sideMenuLogo:hover {
+    
+} */
+
+.menuItem {
+    transition: 0.2s;
+}
+
+.menuItem:hover {
+    font-size: 20px;
+}
