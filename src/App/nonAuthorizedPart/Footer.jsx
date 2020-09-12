@@ -3,7 +3,7 @@ import React from "react";
 /* eslint-disable react/react-in-jsx-scope */
 const Footer = () => {
   return (
-    <>
+    <footer>
       <div
         className="m-0 p-0 pt-2 text-center bg-light"
         style={{
@@ -15,7 +15,7 @@ const Footer = () => {
       >
         <p>Company © MK. All rights reserved.</p>
       </div>
-    </>
+    </footer>
   );
 };
 

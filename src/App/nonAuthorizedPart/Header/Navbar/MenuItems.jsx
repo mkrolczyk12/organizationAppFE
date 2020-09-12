@@ -17,20 +17,14 @@ const MenuItems = [
     exact: false,
   },
   {
-    name: "Pricing",
-    path: "/pricing",
+    name: "Contact",
+    path: "/contact",
     cName: "nav-links",
     exact: false,
   },
   {
-    name: "About",
-    path: "/about",
-    cName: "nav-links",
-    exact: false,
-  },
-  {
-    name: "Charts",
-    path: "/charts",
+    name: "Support",
+    path: "/support",
     cName: "nav-links",
     exact: false,
   },
@@ -50,7 +44,7 @@ const Menu = (props) => {
           {MenuItems.map((eachOption, index) => {
             return (
               <Nav.Link href={eachOption.path} className="menuItem">
-                <Link className={eachOption.cName}>
+                <Link className={eachOption.cName} to={eachOption.path}>
                   <li key={index} onClick={props.closeSideMenu}>
                     {eachOption.name}
                   </li>

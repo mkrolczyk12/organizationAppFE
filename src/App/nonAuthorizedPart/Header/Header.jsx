@@ -18,13 +18,13 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <>
+      <header>
         <NavigationBar
           showSideMenu={this.manageSideMenu}
           sideMenu={this.state.sideMenu}
         />
         <div></div>
-      </>
+      </header>
     );
   }
 }

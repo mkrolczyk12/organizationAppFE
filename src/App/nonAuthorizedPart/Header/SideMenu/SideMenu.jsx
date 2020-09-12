@@ -13,15 +13,17 @@ class SideMenu extends React.Component {
             position: "fixed",
             left: 0,
             top: 0,
+            height: "100%",
+            width: "100%",
             // backgroundColor: "#02203c",
             backgroundColor: "rgba(41, 43, 44,0.9)",
             boxShadow: "0 0 15px 0 #000",
-            overflowY: "auto",
+            // overflowY: "auto",
             zIndex: "9040",
           }}
         >
           <div
-            id="layoutSidenav_nav"
+            // id="layoutSidenav_nav"
             className="d-lg-none position-fixed z4"
             style={{
               position: "fixed",
@@ -29,9 +31,11 @@ class SideMenu extends React.Component {
               top: 0,
               width: "300px",
               height: "100%",
-              // backgroundColor: "#02203c",
+              backgroundColor: "#212529",
               // boxShadow: "0 0 15px 0 #000",
-              // overflowY: "auto",
+              overflowY: "auto",
+              overflowX: "hidden",
+              // overflow: "scroll"
               // zIndex: "9040",
             }}
           >
