@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import panel from "./panel.png";
+import panel from "./images/panel.png";
 
 const Home = () => {
   return (

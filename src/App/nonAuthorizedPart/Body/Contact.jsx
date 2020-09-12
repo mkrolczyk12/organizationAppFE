@@ -1,8 +1,8 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import phone from "./phone.png";
-import email from "./email.png";
-import skype from "./skype.png";
+import phone from "./images/phone.png";
+import email from "./images/email.png";
+import skype from "./images/skype.png";
 
 const options = [
   {
