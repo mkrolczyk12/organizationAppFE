@@ -3,15 +3,16 @@ import { Route, Switch } from "react-router-dom";
 
 import Header from "./Header/Header";
 import Home from "./Body/Home";
-import Footer from "./Footer";
+import Feedback from "./Body/Feedback";
 import Contact from "./Body/Contact";
+import Footer from "./Footer";
 
 class StartPage extends React.Component {
   render() {
     return (
       <>
         <Header />
-        <main className="m-0 p-0" style={{ minHeight: "80vh" }}>
+        <main className="container-fluid m-0 p-0" style={{ minHeight: "80vh" }}>
           <Switch>
             <Route path="/" exact>
               <Home />
@@ -26,7 +27,7 @@ class StartPage extends React.Component {
               <div>Support</div>
             </Route>
             <Route path="/feedback" exact>
-              <div>Feedback</div>
+              <Feedback />
             </Route>
           </Switch>
         </main>

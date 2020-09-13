@@ -4,6 +4,22 @@ import phone from "./images/phone.png";
 import email from "./images/email.png";
 import skype from "./images/skype.png";
 
+const Contact = () => {
+  return (
+    <div
+      className="row p-5 text-center"
+      style={{ minHeight: "inherit", backgroundColor: "pink" }}
+    >
+      <div className="col-12 mb-1 mt-5">
+        <h1>Kontakt dla klientów</h1>
+        <p>Masz pytania dotyczące aplikacji? Skontaktuj się ze mną!</p>
+      </div>
+      <Options />
+    </div>
+  );
+};
+export default Contact;
+
 const options = [
   {
     img: phone,
@@ -24,43 +40,23 @@ const options = [
 
 const Options = () => {
   return (
-    <div className="col-12 d-md-flex flex-grow-1">
+    <div className="col-12 d-md-flex mb-5 flex-grow-1">
       {options.map((each, index) => {
         return (
           <div
             key={index}
-            className="border border-white col-12 col-md-4 m-2 mb-5 h-auto"
+            className="border border-white col-12 col-md-4 m-2 mb-5 p-5"
           >
-            <div>
-              <Image src={each.img} alt="" />
+            <div className="">
+              <Image src={each.img} alt="" className="p-1 mb-1" />
               {each.header}
             </div>
-            <div>{each.content}</div>
+            <p>
+              <b>{each.content}</b>
+            </p>
           </div>
         );
       })}
     </div>
   );
 };
-
-const Contact = () => {
-  return (
-    <div
-      className="container-fluid p-5"
-      style={{ minHeight: "inherit", backgroundColor: "pink" }}
-    >
-      <div
-        className="row h-100 text-center align-middle"
-        style={{ minHeight: "inherit" }}
-      >
-        <div className="col-12 mb-3 text-center">
-          <h1>Kontakt dla klientów</h1>
-          <p>Masz pytania dotyczące aplikacji? Skontaktuj się ze mną!</p>
-        </div>
-        <Options />
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
