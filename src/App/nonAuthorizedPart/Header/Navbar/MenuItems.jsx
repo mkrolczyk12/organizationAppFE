@@ -22,12 +22,12 @@ const MenuItems = [
     cName: "nav-links",
     exact: false,
   },
-  {
-    name: "Support",
-    path: "/support",
-    cName: "nav-links",
-    exact: false,
-  },
+  // {
+  //   name: "Support",
+  //   path: "/support",
+  //   cName: "nav-links",
+  //   exact: false,
+  // },
   {
     name: "Give feedback",
     path: "/feedback",

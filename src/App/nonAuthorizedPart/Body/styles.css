@@ -1,0 +1,14 @@
+.feature {
+    width: 400px;
+    height: 400px;
+    overflow-Y: auto;
+    overflow-X: hidden;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    background-color: coral;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 20px;
+}

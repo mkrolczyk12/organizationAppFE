@@ -32,11 +32,8 @@ class SideMenu extends React.Component {
               width: "300px",
               height: "100%",
               backgroundColor: "#212529",
-              // boxShadow: "0 0 15px 0 #000",
               overflowY: "auto",
               overflowX: "hidden",
-              // overflow: "scroll"
-              // zIndex: "9040",
             }}
           >
             <nav

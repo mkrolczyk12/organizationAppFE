@@ -31,6 +31,7 @@ class Feedback extends React.Component {
       fName: "",
       lName: "",
       email: "",
+      topic: "",
       message: "",
     });
   };
@@ -38,12 +39,13 @@ class Feedback extends React.Component {
   render() {
     return (
       <div className="p-4" style={styles.container}>
-        <h1 className="text-center m-3">Zostaw wiadomość</h1>
+        <h1 className="text-center m-3">Napisz do mnie wiadomość</h1>
         <div className="row p-md-0 m-0">
           <FeedbackForm
             name={this.state.fName}
             surname={this.state.lName}
             email={this.state.email}
+            topic={this.state.topic}
             message={this.state.message}
             handleFormInputChange={this.handleFormInputChange}
             handleFormSubmit={this.handleFormSubmit}
@@ -59,6 +61,7 @@ const FeedbackForm = (props) => {
   return (
     <>
       <Form className="p-4 m-auto border border-white">
+        <Form.Label>Imie i nazwisko</Form.Label>
         <Row className="mb-2">
           <Col>
             <Form.Control
@@ -80,7 +83,7 @@ const FeedbackForm = (props) => {
         <Row className="m-auto mb-2">
           <Col className="m-0 p-0">
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
@@ -94,6 +97,17 @@ const FeedbackForm = (props) => {
             </Form.Group>
           </Col>
         </Row>
+        <Form.Label>Topic</Form.Label>
+        <Row className="mb-2">
+          <Col>
+            <Form.Control
+              name="topic"
+              value={props.topic}
+              onChange={props.handleFormInputChange}
+              placeholder="Enter a topic"
+            />
+          </Col>
+        </Row>
         <Row className="m-auto mb-2">
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Message</Form.Label>
@@ -104,6 +118,7 @@ const FeedbackForm = (props) => {
               onChange={props.handleFormInputChange}
               rows="10"
               cols="50"
+              placeholder="Write your message here"
             />
           </Form.Group>
         </Row>
@@ -119,7 +134,13 @@ const FeedbackForm = (props) => {
         </div>
       </Form>
       <Prompt
-        when={props.name || props.surname || props.email || props.message}
+        when={
+          props.name ||
+          props.surname ||
+          props.topic ||
+          props.email ||
+          props.message
+        }
         message="You have unsaved changes, are you sure you want to leave?"
       ></Prompt>
     </>

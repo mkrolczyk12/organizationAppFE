@@ -3,13 +3,19 @@ import { Image } from "react-bootstrap";
 import panel from "./images/panel.png";
 
 const Home = () => {
+  const styles = {
+    section1: {
+      backgroundColor: "pink",
+      minHeight: "inherit",
+    },
+    section2: {
+      backgroundColor: "orange",
+      minHeight: "inherit",
+    },
+  };
   return (
     <>
-      <section
-        className="p-0 m-0"
-        id="AppPresentation"
-        style={{ minHeight: "100vh", backgroundColor: "pink" }}
-      >
+      <section className="p-0 m-0" id="AppPresentation" style={styles.section1}>
         <div className="row mr-0 p-0 pt-5 w-100 h-100">
           <div className="col-12 col-xl-4 p-5">
             <h1>
@@ -38,11 +44,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section
-        className="p-0 m-0"
-        id="AppPresentation"
-        style={{ minHeight: "100vh", backgroundColor: "orange" }}
-      >
+      <section className="p-0 m-0" id="AppPresentation" style={styles.section2}>
         <div className="row mr-0 p-0 pt-5">
           <div className="col-12 p-5">
             <h1>
