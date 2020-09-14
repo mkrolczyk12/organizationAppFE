@@ -7,7 +7,7 @@ import skype from "./images/skype.png";
 const Contact = () => {
   return (
     <div
-      className="row p-5 text-center"
+      className="row m-0 p-5 text-center"
       style={{ minHeight: "inherit", backgroundColor: "pink" }}
     >
       <div className="col-12 mb-1 mt-5">

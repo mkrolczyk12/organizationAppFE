@@ -35,7 +35,7 @@ const Features = () => {
           <div className="col-12 p-md-0">
             <h1 className="m-auto text-center">
               <p>Najważniejsze </p>
-              <p style={{ fontSize: 60 }}>Funkcjonalności</p>
+              <p style={{ fontSize: "100%" }}>Funkcjonalności</p>
             </h1>
             <div className="row container-fluid m-auto">
               <ListOfFeatures />
@@ -84,7 +84,7 @@ const ListOfFeatures = () => {
   return features.map((feature, index) => {
     return (
       <div key={index} className="feature col-md-6 col-xl-4 p-2 m-auto">
-        <h1 className="m-auto text-center mb-2">{feature.title}</h1>
+        <h1 className="m-auto text-center mb-2 font-italic">{feature.title}</h1>
         <p className="m-auto text-center p-3">{feature.description}</p>
       </div>
     );
