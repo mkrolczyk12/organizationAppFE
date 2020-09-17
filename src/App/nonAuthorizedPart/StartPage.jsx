@@ -24,9 +24,6 @@ class StartPage extends React.Component {
             <Route path="/contact" exact>
               <Contact />
             </Route>
-            {/* <Route path="/support" exact>
-              <div>Support</div>
-            </Route> */}
             <Route path="/feedback" exact>
               <Feedback />
             </Route>

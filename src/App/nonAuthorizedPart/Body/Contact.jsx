@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div
       className="row m-0 p-5 text-center"
-      style={{ minHeight: "inherit", backgroundColor: "pink" }}
+      style={{ minHeight: "100vh", backgroundColor: "pink" }}
     >
       <div className="col-12 mb-1 mt-5">
         <h1>Kontakt dla klientów</h1>

@@ -3,18 +3,11 @@ import React from "react";
 import { Navbar, Button, Nav } from "react-bootstrap";
 import Menu from "./MenuItems.jsx";
 import SideMenu from "../SideMenu/SideMenu";
+import "../styles.css";
 // import logo from "./logo.png";
 
 class NavigationBar extends React.Component {
   state = {};
-
-  // showSideMenu = (props) => {
-  //   console.log(this.props.sideMenu);
-  //   this.setState({
-  //     sideMenu: !this.props.sideMenu,
-  //   });
-  // };
-
   render() {
     return (
       <>
@@ -26,15 +19,18 @@ class NavigationBar extends React.Component {
           <Nav className="flex-grow-1">
             <Menu />
           </Nav>
-          <Button
-            className="m-2 float-right flex-row"
-            variant="outline-primary"
-          >
-            Zaloguj się
-          </Button>
-          <Button className="m-2" variant="outline-info">
+          <Nav.Link href="/dashboard">
+            <button
+              id="loginButton"
+              className="btn btn-md m-2 float-right flex-row"
+              variant="outline-info"
+            >
+              Zaloguj się
+            </button>
+          </Nav.Link>
+          {/* <Button className="m-2" variant="outline-info">
             Utwórz konto
-          </Button>
+          </Button> */}
         </Navbar>
         {/* Mobile menu */}
         <Navbar className="d-lg-none" bg="dark" variant="dark">

@@ -9,14 +9,15 @@ import "./styles.css";
 import app from "./App.css";
 
 import StartPage from "./nonAuthorizedPart/StartPage";
+import Dashboard from "./authorizedPart/Dashboard";
 
 function App() {
   return (
     <div className={app}>
       <Router>
         <Switch>
-          <Route path="/temp" exact>
-            <p>temporary section page</p>
+          <Route path="/dashboard" exact>
+            <Dashboard />
           </Route>
           <Route path="/">
             <StartPage />

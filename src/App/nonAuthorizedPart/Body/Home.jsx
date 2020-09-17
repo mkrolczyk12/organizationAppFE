@@ -6,11 +6,11 @@ const Home = () => {
   const styles = {
     section1: {
       backgroundColor: "pink",
-      minHeight: "inherit",
+      minHeight: "100vh",
     },
     section2: {
       backgroundColor: "orange",
-      minHeight: "inherit",
+      minHeight: "100vh",
     },
   };
   return (

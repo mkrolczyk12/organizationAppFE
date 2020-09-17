@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Button, Navbar } from "react-bootstrap";
+import { Button, Navbar, Nav } from "react-bootstrap";
 import Menu from "../Navbar/MenuItems";
 
 class SideMenu extends React.Component {
@@ -71,12 +71,17 @@ class SideMenu extends React.Component {
                   <div className="d-lg-none sb-sidenav-menu-heading">
                     Account
                   </div>
-                  <Button className="d-lg-none m-2" variant="outline-primary">
-                    Zaloguj się
-                  </Button>
-                  <Button className="d-lg-none m-2" variant="outline-info">
+                  <Nav.Link href="/dashboard">
+                    <Button
+                      className="d-lg-none m-2 w-100"
+                      variant="outline-primary"
+                    >
+                      Zaloguj się
+                    </Button>
+                  </Nav.Link>
+                  {/* <Button className="d-lg-none m-2" variant="outline-info">
                     Utwórz konto
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <div className="sb-sidenav-footer">

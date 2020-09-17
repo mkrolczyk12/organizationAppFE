@@ -1,0 +1,8 @@
+{
+    "realm": "OrganizationApp",
+    "auth-server-url": "http://localhost:8180/auth/",
+    "ssl-required": "none",
+    "resource": "front-end-application",
+    "public-client": true,
+    "confidential-port": 0
+}
