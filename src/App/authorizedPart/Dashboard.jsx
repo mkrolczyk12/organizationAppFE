@@ -35,15 +35,15 @@ class Dashboard extends Component {
             <div
               className={
                 this.state.showSideBarMenu
-                  ? "sb-nav-fixed"
-                  : "sb-nav-fixed sb-sidenav-toggled"
+                  ? "sb-nav-fixed sb-sidenav-toggled"
+                  : "sb-nav-fixed"
               }
             >
               <Navbar
                 handleSideBarMenuDisplay={this.handleSideBarMenuDisplay}
               />
               <div id="layoutSidenav">
-                {this.state.showSideBarMenu && <SideBarMenu />}
+                <SideBarMenu />
                 <MainContent />
               </div>
             </div>
