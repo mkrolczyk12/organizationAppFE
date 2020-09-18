@@ -4,7 +4,7 @@ class SideBarMenu extends React.Component {
   render() {
     return (
       <button
-        className="btn btn-link btn-md order-1 order-lg-0"
+        className="btn btn-link btn-sm order-1 order-lg-0"
         id="sidebarToggle"
         onClick={this.props.handleSideBarMenuDisplay}
         href="#"

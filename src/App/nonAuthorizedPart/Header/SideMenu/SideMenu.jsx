@@ -3,39 +3,46 @@ import React from "react";
 import { Button, Navbar, Nav } from "react-bootstrap";
 import Menu from "../Navbar/MenuItems";
 
+const styles = {
+  background: {
+    position: "fixed",
+    left: 0,
+    top: 0,
+    height: "100%",
+    width: "100%",
+    backgroundColor: "rgba(41, 43, 44,0.9)",
+    boxShadow: "0 0 15px 0 #000",
+    zIndex: "9040",
+  },
+  sideMenu: {
+    position: "fixed",
+    left: 0,
+    top: 0,
+    width: "300px",
+    height: "100%",
+    backgroundColor: "#212529",
+    overflowY: "auto",
+    overflowX: "hidden",
+  },
+  mobileLoginButton: {
+    textAlign: "center",
+    border: "1px solid #5bc0de",
+    textDecoration: "none",
+  },
+  sideMenuLogo: {
+    color: "white",
+  },
+};
+
 class SideMenu extends React.Component {
   render() {
     return (
       <>
         <div
           className="w-100 h-100 m-0 p-0 d-lg-none"
-          style={{
-            position: "fixed",
-            left: 0,
-            top: 0,
-            height: "100%",
-            width: "100%",
-            // backgroundColor: "#02203c",
-            backgroundColor: "rgba(41, 43, 44,0.9)",
-            boxShadow: "0 0 15px 0 #000",
-            // overflowY: "auto",
-            zIndex: "9040",
-          }}
+          style={styles.background}
         >
-          <div
-            // id="layoutSidenav_nav"
-            className="d-lg-none position-fixed z4"
-            style={{
-              position: "fixed",
-              left: 0,
-              top: 0,
-              width: "300px",
-              height: "100%",
-              backgroundColor: "#212529",
-              overflowY: "auto",
-              overflowX: "hidden",
-            }}
-          >
+          <div className="d-lg-none position-fixed z4" style={styles.sideMenu}>
             <nav
               className="sb-sidenav accordion sb-sidenav-dark"
               id="sidenavAccordion"
@@ -44,17 +51,17 @@ class SideMenu extends React.Component {
                 <div className="nav">
                   <div className="row">
                     <div className="col-12 mb-2">
-                      <Button
+                      <button
                         className="btn btn-lg mt-2 mr-2 float-right"
                         onClick={this.props.closeSideMenu}
                       >
                         X
-                      </Button>
+                      </button>
                     </div>
                     <div className="col-12 m-auto mb-4 text-center">
                       <Navbar.Brand
-                        href="#home"
-                        id="sideMenuLogo"
+                        href="/"
+                        style={styles.sideMenuLogo}
                         className="align-self-center m-0 p-0"
                       >
                         <h1 className="m-0 p-0">MoneyApp</h1>
@@ -71,13 +78,23 @@ class SideMenu extends React.Component {
                   <div className="d-lg-none sb-sidenav-menu-heading">
                     Account
                   </div>
-                  <Nav.Link href="/dashboard">
+                  {/* <Nav.Link href="/dashboard">
                     <Button
                       className="d-lg-none m-2 w-100"
                       variant="outline-primary"
                     >
                       Zaloguj się
                     </Button>
+                  </Nav.Link> */}
+                  <Nav.Link href="/dashboard">
+                    <button
+                      // id="loginButton"
+                      className="btn btn-md float-right flex-row m-2 w-100"
+                      variant="outline-info"
+                      style={styles.mobileLoginButton}
+                    >
+                      Zaloguj się
+                    </button>
                   </Nav.Link>
                   {/* <Button className="d-lg-none m-2" variant="outline-info">
                     Utwórz konto
