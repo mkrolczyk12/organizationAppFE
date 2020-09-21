@@ -1,13 +1,24 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import Radium from "radium";
+
 import { Navbar, Nav } from "react-bootstrap";
 import Menu from "./MenuItems.jsx";
 import SideMenu from "../SideMenu/SideMenu";
-import "../styles.css";
 
 const styles = {
   navigationBar: {
     height: "55px",
+  },
+  loginButton: {
+    color: "white",
+    ":hover": {
+      textAlign: "center",
+      border: "2px solid #3eb650",
+      textDecoration: "none",
+    },
+  },
+  logo: {
+    color: "#3eb650",
   },
 };
 
@@ -25,18 +36,19 @@ class NavigationBar extends React.Component {
           style={styles.navigationBar}
         >
           <Navbar.Brand href="/">
-            <h3>MoneyApp</h3>
+            <h3 style={styles.logo}>MoneyApp</h3>
           </Navbar.Brand>
           <Nav className="flex-grow-1">
             <Menu />
           </Nav>
           <Nav.Link href="/dashboard">
             <button
-              id="loginButton"
+              key="loginButtonLargeScreen"
               className="btn btn-md float-right flex-row"
               variant="outline-info"
+              style={styles.loginButton}
             >
-              Zaloguj się
+              Log in
             </button>
           </Nav.Link>
         </Navbar>
@@ -50,34 +62,32 @@ class NavigationBar extends React.Component {
           <button
             className="btn btn-link btn-md border-0"
             id="sidebarToggle"
-            href="#"
             variant="outline-primary"
             onClick={this.props.showSideMenu}
           >
             <i className="navbar-toggler-icon"></i>
           </button>
           <Navbar.Brand href="/" className="m-auto p-0">
-            <h3>MoneyApp</h3>
+            <h3 style={styles.logo}>MoneyApp</h3>
           </Navbar.Brand>
           <Nav.Link href="/dashboard">
             <button
-              id="loginButton"
+              key="loginButtonMediumScreens"
+              style={styles.loginButton}
               className="d-none d-sm-block btn btn-md float-right flex-row"
               variant="outline-info"
             >
-              Zaloguj się
+              Log in
             </button>
           </Nav.Link>
         </Navbar>
         {/* Side menu */}
-        {this.props.sideMenu ? (
+        {this.props.sideMenu && (
           <SideMenu closeSideMenu={this.props.showSideMenu} />
-        ) : (
-          ""
         )}
       </>
     );
   }
 }
 
-export default NavigationBar;
+export default Radium(NavigationBar);

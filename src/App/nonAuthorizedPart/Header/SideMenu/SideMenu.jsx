@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Button, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import Menu from "../Navbar/MenuItems";
 
 const styles = {
@@ -20,17 +20,17 @@ const styles = {
     top: 0,
     width: "300px",
     height: "100%",
-    backgroundColor: "#212529",
+    backgroundColor: "#343a40",
     overflowY: "auto",
     overflowX: "hidden",
   },
   mobileLoginButton: {
     textAlign: "center",
-    border: "1px solid #5bc0de",
+    border: "1px solid #3eb650",
     textDecoration: "none",
   },
   sideMenuLogo: {
-    color: "white",
+    color: "#3eb650",
   },
 };
 
@@ -65,7 +65,9 @@ class SideMenu extends React.Component {
                         className="align-self-center m-0 p-0"
                       >
                         <h1 className="m-0 p-0">MoneyApp</h1>
-                        <small>Be aware of your finances.</small>
+                        <small>
+                          <i>Be aware of your finances.</i>
+                        </small>
                       </Navbar.Brand>
                     </div>
                   </div>
@@ -78,27 +80,15 @@ class SideMenu extends React.Component {
                   <div className="d-lg-none sb-sidenav-menu-heading">
                     Account
                   </div>
-                  {/* <Nav.Link href="/dashboard">
-                    <Button
-                      className="d-lg-none m-2 w-100"
-                      variant="outline-primary"
-                    >
-                      Zaloguj się
-                    </Button>
-                  </Nav.Link> */}
                   <Nav.Link href="/dashboard">
                     <button
-                      // id="loginButton"
                       className="btn btn-md float-right flex-row m-2 w-100"
                       variant="outline-info"
                       style={styles.mobileLoginButton}
                     >
-                      Zaloguj się
+                      Log in
                     </button>
                   </Nav.Link>
-                  {/* <Button className="d-lg-none m-2" variant="outline-info">
-                    Utwórz konto
-                  </Button> */}
                 </div>
               </div>
               <div className="sb-sidenav-footer">

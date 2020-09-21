@@ -2,17 +2,19 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import panel from "./images/panel.png";
 
+const styles = {
+  section1: {
+    backgroundColor: "#fff",
+    minHeight: "100vh",
+  },
+  section2: {
+    // backgroundColor: "#7f8688",
+    backgroundColor: "#929d9e",
+    minHeight: "100vh",
+  },
+};
+
 const Home = () => {
-  const styles = {
-    section1: {
-      backgroundColor: "pink",
-      minHeight: "100vh",
-    },
-    section2: {
-      backgroundColor: "orange",
-      minHeight: "100vh",
-    },
-  };
   return (
     <>
       <section className="p-0 m-0" id="AppPresentation" style={styles.section1}>

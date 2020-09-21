@@ -6,14 +6,22 @@ import {
   Redirect,
 } from "react-router-dom";
 import "./styles.css";
-import app from "./App.css";
+import Radium from "radium";
 
 import StartPage from "./nonAuthorizedPart/StartPage";
 import Dashboard from "./authorizedPart/Dashboard";
 
+const styles = {
+  app: {
+    boxSizing: "border-box",
+    margin: 0,
+    padding: 0,
+  },
+};
+
 function App() {
   return (
-    <div className={app}>
+    <div style={styles.app}>
       <Router>
         <Switch>
           <Route path="/dashboard" exact>
@@ -31,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Radium(App);

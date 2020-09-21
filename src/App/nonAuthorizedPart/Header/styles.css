@@ -25,13 +25,3 @@
 .lowerPart {
   text-align: "center";
 }
-
-#loginButton {
-  color: white;
-}
-
-#loginButton:hover {
-  text-align: center;
-  border: 2px solid #5bc0de;
-  text-decoration: none;
-}

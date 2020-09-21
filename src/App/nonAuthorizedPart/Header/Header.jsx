@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "./Navbar/NavigationBar";
+import Radium from "radium";
 
 class Header extends React.Component {
   state = {
@@ -7,7 +8,6 @@ class Header extends React.Component {
   };
 
   manageSideMenu = () => {
-    console.log(this.state.sideMenu);
     this.setState({
       sideMenu: !this.state.sideMenu,
     });
@@ -16,6 +16,7 @@ class Header extends React.Component {
   componentDidUpdate() {
     window.scrollTo(0, 0);
   }
+
   render() {
     return (
       <header>
@@ -23,10 +24,9 @@ class Header extends React.Component {
           showSideMenu={this.manageSideMenu}
           sideMenu={this.state.sideMenu}
         />
-        <div></div>
       </header>
     );
   }
 }
 
-export default Header;
+export default Radium(Header);
