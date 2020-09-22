@@ -4,12 +4,17 @@ import "./styles.css";
 const Features = () => {
   const styles = {
     section1: {
+      // backgroundColor: "grey",
       backgroundColor: "grey",
       minHeight: "100vh",
     },
     section2: {
-      backgroundColor: "pink",
+      backgroundColor: "#fff",
       minHeight: "100vh",
+    },
+    title: {
+      fontWeight: "900",
+      marginBottom: 20,
     },
   };
 
@@ -17,7 +22,7 @@ const Features = () => {
     <div className="m-0 p-0" style={styles.container}>
       <section className="p-5 m-0" style={styles.section1}>
         <div className="row m-auto">
-          <h1 className="col-12 text-center p-3">
+          <h1 className="col-12 text-center p-3" style={styles.title}>
             Innowacja w procesach płatności
           </h1>
           <p className="col-md-6 m-auto text-center font-italic justify-content-center">
@@ -33,7 +38,7 @@ const Features = () => {
       <section className="p-md-5 m-0 pb-5 pb-md-0" style={styles.section2}>
         <div className="row m-0 p-0 m-auto">
           <div className="col-12 p-md-0">
-            <h1 className="m-auto text-center">
+            <h1 className="m-auto text-center" style={styles.title}>
               <p>Najważniejsze </p>
               <p style={{ fontSize: "100%" }}>Funkcjonalności</p>
             </h1>

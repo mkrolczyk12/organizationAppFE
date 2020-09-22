@@ -8,7 +8,6 @@ const styles = {
     minHeight: "100vh",
   },
   section2: {
-    // backgroundColor: "#7f8688",
     backgroundColor: "#929d9e",
     minHeight: "100vh",
   },

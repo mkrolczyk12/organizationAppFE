@@ -1,8 +1,7 @@
 import React from "react";
 import Radium from "radium";
 
-import { Link } from "react-router-dom";
-import { Nav as div } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const styles = {
   menu: {
@@ -24,6 +23,82 @@ const styles = {
     color: "#fff",
     textDecoration: "none",
   },
+  LargeMenuMenuItemOption: {
+    color: "#fff",
+    textDecoration: "none",
+  },
+  activeLink: {
+    borderBottom: "1px solid #3eb650",
+  },
+  activeMobileLink: {
+    display: "flex",
+    borderRight: "2px solid #3eb650",
+    fontSize: 20,
+  },
+};
+
+const Menu = (props) => {
+  return props.mobile ? (
+    <MobileMenu closeSideMenu={props.closeSideMenu} />
+  ) : (
+    <PcMenu closeSideMenu={props.closeSideMenu} />
+  );
+};
+export default Radium(Menu);
+
+const MobileMenu = (props) => {
+  return (
+    <div className="col-12 p-0 m-0" style={styles.menu}>
+      {MenuItems.map((eachOption, index) => {
+        return (
+          <div
+            key={index}
+            href={eachOption.path}
+            className={eachOption.cName}
+            style={styles.eachMenuItemDiv}
+          >
+            <NavLink
+              className={eachOption.cName}
+              activeStyle={styles.activeMobileLink}
+              style={styles.eachMenuItemOption}
+              to={eachOption.path}
+              exact
+            >
+              <li
+                key={eachOption.name}
+                onClick={props.closeSideMenu}
+                style={styles.eachMenuItemOption}
+              >
+                {eachOption.name}
+              </li>
+            </NavLink>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const PcMenu = () => {
+  return MenuItems.map((eachOption, index) => {
+    return (
+      <li
+        key={index}
+        className="m-0 p-0"
+        style={styles.LargeMenuMenuItemOption}
+      >
+        <NavLink
+          to={eachOption.path}
+          activeStyle={styles.activeLink}
+          className={"m-2" + eachOption.cName}
+          style={styles.LargeMenuMenuItemOption}
+          exact={eachOption.exact}
+        >
+          {eachOption.name}
+        </NavLink>
+      </li>
+    );
+  });
 };
 
 const MenuItems = [
@@ -31,73 +106,24 @@ const MenuItems = [
     name: "Home",
     path: "/",
     cName: "",
+    exact: true,
   },
   {
     name: "Features",
     path: "/features",
     cName: "",
+    exact: true,
   },
   {
     name: "Contact",
     path: "/contact",
     cName: "",
+    exact: true,
   },
   {
     name: "Give feedback",
     path: "/feedback",
     cName: "",
+    exact: true,
   },
 ];
-
-const Menu = (props) => {
-  return (
-    <>
-      {props.mobile ? (
-        <div className="col-12 p-0 m-0" style={styles.menu}>
-          {MenuItems.map((eachOption, index) => {
-            return (
-              <div
-                key={index}
-                href={eachOption.path}
-                className={eachOption.cName}
-                style={styles.eachMenuItemDiv}
-              >
-                <Link
-                  className={eachOption.cName}
-                  style={styles.eachMenuItemOption}
-                  to={eachOption.path}
-                >
-                  <li
-                    key={eachOption.name}
-                    onClick={props.closeSideMenu}
-                    style={styles.eachMenuItemOption}
-                  >
-                    {eachOption.name}
-                  </li>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        MenuItems.map((eachOption, index) => {
-          return (
-            <li key={index} onClick={props.closeSideMenu}>
-              <div.Link>
-                <Link
-                  to={eachOption.path}
-                  className={eachOption.cName}
-                  style={styles.eachMenuItemOption}
-                >
-                  {eachOption.name}
-                </Link>
-              </div.Link>
-            </li>
-          );
-        })
-      )}
-    </>
-  );
-};
-
-export default Radium(Menu);

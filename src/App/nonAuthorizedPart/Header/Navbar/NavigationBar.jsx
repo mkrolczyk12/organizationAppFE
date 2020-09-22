@@ -48,7 +48,7 @@ class NavigationBar extends React.Component {
               variant="outline-info"
               style={styles.loginButton}
             >
-              Log in
+              <b>Log in</b>
             </button>
           </Nav.Link>
         </Navbar>
@@ -77,7 +77,7 @@ class NavigationBar extends React.Component {
               className="d-none d-sm-block btn btn-md float-right flex-row"
               variant="outline-info"
             >
-              Log in
+              <b>Log in</b>
             </button>
           </Nav.Link>
         </Navbar>

@@ -23,7 +23,7 @@ const styles = {
 const Footer = () => {
   return (
     <footer className="p-2 m-0" style={styles.footer}>
-      <div className="m-0 p-2 text-center">
+      <div className="m-0 p-0 p-md-2 text-center">
         <FooterLinksComponent />
         <p className="m-0 p-0" style={styles.text}>
           Copyright © 2020 MK. All rights reserved.

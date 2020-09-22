@@ -14,6 +14,7 @@ import Dashboard from "./authorizedPart/Dashboard";
 const styles = {
   app: {
     boxSizing: "border-box",
+    fontSize: "17px",
     margin: 0,
     padding: 0,
   },
