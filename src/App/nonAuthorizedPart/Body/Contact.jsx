@@ -1,15 +1,22 @@
 import React from "react";
+import Radium from "radium";
+
 import { Image } from "react-bootstrap";
+
 import phone from "./images/phone.png";
 import email from "./images/email.png";
 import skype from "./images/skype.png";
 
+const styles = {
+  page: {
+    minHeight: "100vh",
+    backgroundColor: "#212529",
+    color: "#fff",
+  },
+};
 const Contact = () => {
   return (
-    <div
-      className="row m-0 p-5 text-center"
-      style={{ minHeight: "100vh", backgroundColor: "pink" }}
-    >
+    <div className="row m-0 p-5 text-center" style={styles.page}>
       <div className="col-12 mb-1 mt-5">
         <h1>Kontakt dla klientów</h1>
         <p>Masz pytania dotyczące aplikacji? Skontaktuj się ze mną!</p>
@@ -18,7 +25,7 @@ const Contact = () => {
     </div>
   );
 };
-export default Contact;
+export default Radium(Contact);
 
 const options = [
   {

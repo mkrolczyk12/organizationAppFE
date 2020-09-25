@@ -4,7 +4,10 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 
 const styles = {
   container: {
-    backgroundColor: "pink",
+    backgroundColor: "#fff",
+    // backgroundColor: "#212529",
+    color: "#212529",
+    // color: "#fff",
     minHeight: "inherit",
   },
 };

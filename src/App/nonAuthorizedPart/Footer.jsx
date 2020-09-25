@@ -3,17 +3,14 @@ import Radium from "radium";
 import { Link } from "react-router-dom";
 
 const styles = {
-  footer: {
+  footerBase: {
     minHeight: "10vh",
-    backgroundColor: "#343a40",
-    borderTop: "2px double #000",
+    backgroundColor: "#212529",
+    color: "#fff",
     borderTopWidth: "medium",
     top: "80%",
   },
-  text: {
-    color: "#fff",
-  },
-  eachFooterLinkOption: {
+  eachFooterLinkBasicOption: {
     display: "flex",
     color: "#fff",
     textDecoration: "none",
@@ -22,12 +19,13 @@ const styles = {
 
 const Footer = () => {
   return (
-    <footer className="p-2 m-0" style={styles.footer}>
-      <div className="m-0 p-0 p-md-2 text-center">
+    <footer className="p-0 m-0" style={styles.footerBase}>
+      <div
+        className="p-2 p-md-2 text-center w-75 m-auto"
+        style={{ borderTop: "1px solid #fff" }}
+      >
         <FooterLinksComponent />
-        <p className="m-0 p-0" style={styles.text}>
-          Copyright © 2020 MK. All rights reserved.
-        </p>
+        <p className="m-0 p-0">Copyright © 2020 MK. All rights reserved.</p>
       </div>
     </footer>
   );
@@ -40,10 +38,10 @@ const FooterLinksComponent = () => {
       <Link
         key={index}
         to={eachLink.path}
-        style={styles.eachFooterLinkOption}
+        style={styles.eachFooterLinkBasicOption}
         className={"d-inline-block mr-2 ml-2 mb-2" + eachLink.cName}
       >
-        <li key={eachLink.name} style={styles.eachFooterLinkOption}>
+        <li key={eachLink.name} style={styles.eachFooterLinkBasicOption}>
           {eachLink.name}
         </li>
       </Link>
