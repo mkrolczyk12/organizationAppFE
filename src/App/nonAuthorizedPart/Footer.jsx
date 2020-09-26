@@ -1,13 +1,12 @@
 import React from "react";
 import Radium from "radium";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const styles = {
   footerBase: {
     minHeight: "10vh",
     backgroundColor: "#212529",
     color: "#fff",
-    borderTopWidth: "medium",
     top: "80%",
   },
   eachFooterLinkBasicOption: {
@@ -22,7 +21,11 @@ const Footer = () => {
     <footer className="p-0 m-0" style={styles.footerBase}>
       <div
         className="p-2 p-md-2 text-center w-75 m-auto"
-        style={{ borderTop: "1px solid #fff" }}
+        style={
+          useLocation().pathname === "/feedback"
+            ? {}
+            : { borderTop: "1px solid #fff" }
+        }
       >
         <FooterLinksComponent />
         <p className="m-0 p-0">Copyright © 2020 MK. All rights reserved.</p>
@@ -61,12 +64,12 @@ const FooterLinks = [
   },
   {
     name: "Reviews",
-    path: "/revievs",
+    path: "/",
     cName: "",
   },
   {
     name: "Blog",
-    path: "/blog",
+    path: "/",
     cName: "",
   },
   {
@@ -76,7 +79,7 @@ const FooterLinks = [
   },
   {
     name: "Newsletter",
-    path: "/newsletter",
+    path: "/",
     cName: "",
   },
 ];

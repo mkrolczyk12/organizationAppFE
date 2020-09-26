@@ -1,14 +1,35 @@
 import React from "react";
+import Radium from "radium";
+
 import { Prompt } from "react-router-dom";
 import { Form, Row, Col, Button } from "react-bootstrap";
 
 const styles = {
   container: {
     backgroundColor: "#fff",
-    // backgroundColor: "#212529",
     color: "#212529",
-    // color: "#fff",
     minHeight: "inherit",
+  },
+  sectionMainTitle: {
+    fontWeight: "900",
+  },
+  submitButton: {
+    border: "none",
+    backgroundColor: "#3eb650",
+    ":hover": {
+      backgroundColor: "#4fc761",
+      border: "1px solid #fff",
+    },
+  },
+  elementOnFocus: {
+    ":focus": {
+      outline: "none",
+      border: "1px solid #3eb650",
+    },
+    ":active": {
+      outline: "none",
+      border: "1px solid #3eb650",
+    },
   },
 };
 
@@ -42,7 +63,9 @@ class Feedback extends React.Component {
   render() {
     return (
       <div className="p-4" style={styles.container}>
-        <h1 className="text-center m-3">Napisz do mnie wiadomość</h1>
+        <h1 className="text-center m-3" style={styles.sectionMainTitle}>
+          Send feedback
+        </h1>
         <div className="row p-md-0 m-0">
           <FeedbackForm
             name={this.state.fName}
@@ -58,13 +81,13 @@ class Feedback extends React.Component {
     );
   }
 }
-export default Feedback;
+export default Radium(Feedback);
 
 const FeedbackForm = (props) => {
   return (
     <>
-      <Form className="p-4 m-auto border border-white">
-        <Form.Label>Imie i nazwisko</Form.Label>
+      <Form className="p-4 m-auto">
+        <Form.Label>First and last name</Form.Label>
         <Row className="mb-2">
           <Col>
             <Form.Control
@@ -72,6 +95,7 @@ const FeedbackForm = (props) => {
               value={props.name}
               onChange={props.handleFormInputChange}
               placeholder="First name"
+              style={styles.elementOnFocus}
             />
           </Col>
           <Col>
@@ -125,16 +149,7 @@ const FeedbackForm = (props) => {
             />
           </Form.Group>
         </Row>
-        <div className="m-auto text-center">
-          <Button
-            className=""
-            variant="primary"
-            type="submit"
-            onClick={props.handleFormSubmit}
-          >
-            Submit
-          </Button>
-        </div>
+        <SubmitButton handleFormSubmit={props.handleFormSubmit} />
       </Form>
       <Prompt
         when={
@@ -149,3 +164,19 @@ const FeedbackForm = (props) => {
     </>
   );
 };
+
+const submitbutton = (props) => {
+  return (
+    <div className="m-auto text-center">
+      <Button
+        className="m-auto text-center"
+        type="submit"
+        onClick={props.handleFormSubmit}
+        style={styles.submitButton}
+      >
+        Submit
+      </Button>
+    </div>
+  );
+};
+const SubmitButton = Radium(submitbutton);
