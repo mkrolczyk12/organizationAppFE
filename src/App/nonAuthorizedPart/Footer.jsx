@@ -28,7 +28,9 @@ const Footer = () => {
         }
       >
         <FooterLinksComponent />
-        <p className="m-0 p-0">Copyright © 2020 MK. All rights reserved.</p>
+        <p className="m-0 p-0">
+          <small>Copyright © 2020 MK. All rights reserved.</small>
+        </p>
       </div>
     </footer>
   );

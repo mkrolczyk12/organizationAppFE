@@ -15,10 +15,8 @@ const styles = {
   },
   contactOption: {
     border: "1px solid #3eb650",
-    // backgroundColor: "#fff",
+    maxWidth: "500px",
     color: "#fff",
-    // color: "#fff",
-    // color: "#fff",
     ":hover": {
       backgroundColor: "#3eb650",
       color: "rgba(0,0,0,.8)",

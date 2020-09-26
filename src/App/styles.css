@@ -2202,7 +2202,8 @@ pre code {
   background-color: #fff;
   border-color: #4fc761;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+  box-shadow: 0 0 0 0.2rem rgba(79, 199, 97, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {

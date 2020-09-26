@@ -18,24 +18,23 @@ const styles = {
   feature: {
     width: "400px",
     height: "400px",
+    color: "#fff",
+    marginBottom: 10,
     overflowY: "auto",
     overflowX: "hidden",
     transition: "0.3s",
     ":hover": {
-      backgroundColor: "#3eb650",
       borderRadius: 5,
-      color: "rgba(0,0,0,.8)",
-      MozBoxShadow: "0 0 3px #ccc",
-      WebkitBoxShadow: "0 0 3px #ccc",
-      boxShadow: "0 0 20px",
+      border: "1px solid #fff",
+    },
+    ":focus": {
+      borderRadius: 5,
+      border: "1px solid #fff",
     },
   },
   featureTitle: {
     color: "#3eb650",
     transition: "0.3s",
-    ":hover": {
-      color: "black",
-    },
   },
 };
 
@@ -60,12 +59,12 @@ const Features = () => {
       </section>
       <section className="p-md-5 m-0 pb-5 pb-md-0" style={styles.section2}>
         <h1
-          className="m-auto mb-1 mt-2 pt-5 pt-md-0 pb-2 pb-md-5 text-center"
+          className="m-auto mb-1 mt-2 pt-5 pt-md-0 pb-4 pb-md-5 text-center"
           style={styles.sectionMainTitle}
         >
           Najważniejsze Funkcjonalności
         </h1>
-        <div className="row container-fluid m-auto">
+        <div className="row container-fluid ml-auto mr-auto">
           {<AdjustedListOfFeatures />}
         </div>
       </section>
@@ -112,7 +111,7 @@ const ListOfFeatures = () => {
     return (
       <div
         key={index}
-        className="col-md-6 col-xl-4 p-2 m-auto"
+        className="col-md-6 col-xl-4 p-2 ml-auto mr-auto"
         style={styles.feature}
       >
         <h1
