@@ -1,5 +1,22 @@
 import React from "react";
+import Radium from "radium";
+
 import { Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTachometerAlt,
+  faCreditCard,
+  faChartBar,
+  faCalendarAlt,
+  faCalculator,
+  faClipboard,
+  faCoins,
+  faWallet,
+  faListUl,
+  faQuestionCircle,
+  faAddressCard,
+} from "@fortawesome/free-solid-svg-icons";
 
 class SideBarMenu extends React.Component {
   render() {
@@ -14,11 +31,35 @@ class SideBarMenu extends React.Component {
               <div className="sb-sidenav-menu-heading">Core</div>
               <a className="nav-link" href="index.html">
                 <div className="sb-nav-link-icon">
-                  <i className="fas fa-tachometer-alt"></i>
+                  <FontAwesomeIcon icon={faTachometerAlt}></FontAwesomeIcon>
                 </div>
                 Dashboard
               </a>
-              <div className="sb-sidenav-menu-heading">Interface</div>
+              <a className="nav-link" href="index.html">
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faCreditCard}></FontAwesomeIcon>
+                </div>
+                Summary
+              </a>
+              <a className="nav-link" href="index.html">
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faChartBar}></FontAwesomeIcon>
+                </div>
+                Statistics
+              </a>
+              <a className="nav-link" href="index.html">
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faWallet}></FontAwesomeIcon>
+                </div>
+                Earnings
+              </a>
+              <a className="nav-link" href="index.html">
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faListUl}></FontAwesomeIcon>
+                </div>
+                Transactions
+              </a>
+              <div className="sb-sidenav-menu-heading">Tools</div>
               <Link
                 className="nav-link collapsed"
                 to="#"
@@ -28,28 +69,10 @@ class SideBarMenu extends React.Component {
                 aria-controls="collapseLayouts"
               >
                 <div className="sb-nav-link-icon">
-                  <i className="fas fa-columns"></i>
+                  <FontAwesomeIcon icon={faCalendarAlt}></FontAwesomeIcon>
                 </div>
-                Layouts
-                <div className="sb-sidenav-collapse-arrow">
-                  <i className="fas fa-angle-down"></i>
-                </div>
+                Calendar
               </Link>
-              <div
-                className="collapse"
-                id="collapseLayouts"
-                aria-labelledby="headingOne"
-                data-parent="#sidenavAccordion"
-              >
-                <nav className="sb-sidenav-menu-nested nav">
-                  <a className="nav-link" href="layout-static.html">
-                    Static Navigation
-                  </a>
-                  <a className="nav-link" href="layout-sidenav-light.html">
-                    Light Sidenav
-                  </a>
-                </nav>
-              </div>
               <Link
                 className="nav-link collapsed"
                 href="#"
@@ -59,105 +82,54 @@ class SideBarMenu extends React.Component {
                 aria-controls="collapsePages"
               >
                 <div className="sb-nav-link-icon">
-                  <i className="fas fa-book-open"></i>
+                  <FontAwesomeIcon icon={faCalculator}></FontAwesomeIcon>
                 </div>
-                Pages
-                <div className="sb-sidenav-collapse-arrow">
-                  <i className="fas fa-angle-down"></i>
-                </div>
+                Calculator
               </Link>
-              <div
-                className="collapse"
-                id="collapsePages"
-                aria-labelledby="headingTwo"
-                data-parent="#sidenavAccordion"
+              <Link
+                className="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePages"
+                aria-expanded="false"
+                aria-controls="collapsePages"
               >
-                <nav
-                  className="sb-sidenav-menu-nested nav accordion"
-                  id="sidenavAccordionPages"
-                >
-                  <Link
-                    className="nav-link collapsed"
-                    href="#"
-                    data-toggle="collapse"
-                    data-target="#pagesCollapseAuth"
-                    aria-expanded="false"
-                    aria-controls="pagesCollapseAuth"
-                  >
-                    Authentication
-                    <div className="sb-sidenav-collapse-arrow">
-                      <i className="fas fa-angle-down"></i>
-                    </div>
-                  </Link>
-                  <div
-                    className="collapse"
-                    id="pagesCollapseAuth"
-                    aria-labelledby="headingOne"
-                    data-parent="#sidenavAccordionPages"
-                  >
-                    <nav className="sb-sidenav-menu-nested nav">
-                      <a className="nav-link" href="login.html">
-                        Login
-                      </a>
-                      <a className="nav-link" href="register.html">
-                        Register
-                      </a>
-                      <a className="nav-link" href="password.html">
-                        Forgot Password
-                      </a>
-                    </nav>
-                  </div>
-                  <Link
-                    className="nav-link collapsed"
-                    href="#"
-                    data-toggle="collapse"
-                    data-target="#pagesCollapseError"
-                    aria-expanded="false"
-                    aria-controls="pagesCollapseError"
-                  >
-                    Error
-                    <div className="sb-sidenav-collapse-arrow">
-                      <i className="fas fa-angle-down"></i>
-                    </div>
-                  </Link>
-                  <div
-                    className="collapse"
-                    id="pagesCollapseError"
-                    aria-labelledby="headingOne"
-                    data-parent="#sidenavAccordionPages"
-                  >
-                    <nav className="sb-sidenav-menu-nested nav">
-                      <a className="nav-link" href="401.html">
-                        401 Page
-                      </a>
-                      <a className="nav-link" href="404.html">
-                        404 Page
-                      </a>
-                      <a className="nav-link" href="500.html">
-                        500 Page
-                      </a>
-                    </nav>
-                  </div>
-                </nav>
-              </div>
-              <div className="sb-sidenav-menu-heading">Addons</div>
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>
+                </div>
+                Notebook
+              </Link>
+              <Link
+                className="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePages"
+                aria-expanded="false"
+                aria-controls="collapsePages"
+              >
+                <div className="sb-nav-link-icon">
+                  <FontAwesomeIcon icon={faCoins}></FontAwesomeIcon>
+                </div>
+                Currency converter
+              </Link>
+              <div className="sb-sidenav-menu-heading">Other</div>
               <a className="nav-link" href="charts.html">
                 <div className="sb-nav-link-icon">
-                  <i className="fas fa-chart-area"></i>
+                  <FontAwesomeIcon icon={faQuestionCircle}></FontAwesomeIcon>
                 </div>
-                Charts
+                FAQ
               </a>
               <a className="nav-link" href="tables.html">
                 <div className="sb-nav-link-icon">
-                  <i className="fas fa-table"></i>
+                  <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon>
                 </div>
-                Tables
+                Contact me
               </a>
             </div>
           </div>
           <div className="sb-sidenav-footer">
             <div className="small">Logged in as:</div>
-            Start Bootstrap
+            <p>MK</p>
           </div>
         </nav>
       </div>
@@ -165,4 +137,4 @@ class SideBarMenu extends React.Component {
   }
 }
 
-export default SideBarMenu;
+export default Radium(SideBarMenu);

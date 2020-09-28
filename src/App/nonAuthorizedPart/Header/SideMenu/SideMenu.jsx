@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
-import Menu from "../Navbar/MenuItems";
+import Menu from "../NavigationBar/MenuItems";
 
 const styles = {
   background: {

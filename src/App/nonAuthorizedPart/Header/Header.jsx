@@ -1,6 +1,7 @@
 import React from "react";
-import NavigationBar from "./Navbar/NavigationBar";
 import Radium from "radium";
+
+import NavigationBar from "./NavigationBar/NavigationBar.jsx";
 
 class Header extends React.Component {
   state = {

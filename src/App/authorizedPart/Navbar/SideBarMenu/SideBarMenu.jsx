@@ -1,4 +1,5 @@
 import React from "react";
+import Radium from "radium";
 
 class SideBarMenu extends React.Component {
   render() {
@@ -14,4 +15,4 @@ class SideBarMenu extends React.Component {
     );
   }
 }
-export default SideBarMenu;
+export default Radium(SideBarMenu);
