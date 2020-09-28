@@ -33,7 +33,7 @@ https://github.com/mkrolczyk12/organizationApp
 
 ## Build instruction
 
-Requirements: git, npm, node.js
+Requirements: git, npm, node.js <br />
 To run project, follow these steps: <br />
 
 1. Open terminal and clone the project from github repository:
