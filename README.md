@@ -14,7 +14,7 @@ Frontend part of organizationApp
 
 ## General info
 
-The main goal of the app is to track of all your expenses and earnings. The application is mainly based on react.js and bootstrap 4. The project also often uses the radium library - a toolkit for managing inline styles in React elements. The user authentication process is performed using keycloak which is an open source identity and access management solution. After a successful authentication process, the user gains access to the entire application. Thanks to the RWD technology, the web application can be used on any device.
+The main goal of the application is to track all user expenses and earnings. To use the application, you need to create an account and log in. The user authentication process is performed by using keycloak - an open source identity and access management solution. After a successful authentication process, the user gains access to the entire application. Thanks to the RWD technology, the web application can be used comfortably on any device.
 
 ## Technologies and dependencies
 
@@ -45,7 +45,7 @@ $ git clone https://github.com/mkrolczyk12/organizationAppFE.git
 2. After successful clone go to project, open terminal and type below command:
 
 ```
-`npm start`
+$ `npm start`
 ```
 
 This script runs the app in the development mode.<br />
