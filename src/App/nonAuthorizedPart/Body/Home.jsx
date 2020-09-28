@@ -15,6 +15,12 @@ const styles = {
     color: "#929d9e",
     minHeight: "100vh",
   },
+  sectionTitle: {
+    fontSize: 60,
+    "@media (max-width: 430px)": {
+      fontSize: 50,
+    },
+  },
 };
 
 const Home = () => {
@@ -34,7 +40,7 @@ const FirstSection = () => {
         <div className="col-12 col-xl-4 p-5">
           <h1 style={{ fontWeight: "900" }}>
             Czym jest
-            <p style={{ fontSize: 60 }}>MoneyApp?</p>
+            <p style={styles.sectionTitle}>MoneyApp?</p>
           </h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -68,7 +74,7 @@ const SecondSection = () => {
         <div className="col-12 p-5">
           <h1 style={{ color: "#fff", fontWeight: "900" }}>
             Jakie daje nam
-            <p style={{ fontSize: 60 }}>Korzyści?</p>
+            <p style={styles.sectionTitle}>Korzyści?</p>
           </h1>
           <div className="row">
             <div className="col-12 col-md-6 p-0 m-0">
