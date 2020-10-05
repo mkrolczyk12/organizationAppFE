@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+
 import { Navbar, Nav } from "react-bootstrap";
 import Menu from "../NavigationBar/MenuItems";
 
@@ -20,7 +20,8 @@ const styles = {
     top: 0,
     width: "300px",
     height: "100%",
-    backgroundColor: "#343a40",
+    backgroundColor: "#212529",
+    color: "#fff",
     overflowY: "auto",
     overflowX: "hidden",
   },
@@ -28,9 +29,26 @@ const styles = {
     textAlign: "center",
     border: "1px solid #3eb650",
     textDecoration: "none",
+    color: "#fff",
   },
   sideMenuLogo: {
     color: "#3eb650",
+  },
+  closeButton: {
+    color: "white",
+  },
+  sideNavMenuHeading: {
+    padding: "1.75rem 1rem 0.75rem",
+    fontSize: "0.75rem",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    color: "white",
+  },
+  sideNavFooter: {
+    backgroundColor: "#343a40",
+    padding: "0.75rem",
+    flexShrink: 0,
+    color: "rgba(255, 255, 255, 0.5)",
   },
 };
 
@@ -42,18 +60,22 @@ class SideMenu extends React.Component {
           className="w-100 h-100 m-0 p-0 d-lg-none"
           style={styles.background}
         >
-          <div className="d-lg-none position-fixed z4" style={styles.sideMenu}>
+          <div
+            className="d-lg-none position-fixed z4 h-100"
+            style={styles.sideMenu}
+          >
             <nav
-              className="sb-sidenav accordion sb-sidenav-dark"
+              className="sb-sidenav accordion sb-sidenav-dark h-100 d-flex flex-column"
               id="sidenavAccordion"
             >
-              <div className="sb-sidenav-menu">
+              <div className="sb-sidenav-menu flex-grow-1">
                 <div className="nav">
-                  <div className="row">
+                  <div className="row m-auto">
                     <div className="col-12 mb-2">
                       <button
-                        className="btn btn-lg mt-2 mr-2 float-right"
+                        className="btn btn-lg mt-2 float-right"
                         onClick={this.props.closeSideMenu}
+                        style={styles.closeButton}
                       >
                         X
                       </button>
@@ -71,18 +93,21 @@ class SideMenu extends React.Component {
                       </Navbar.Brand>
                     </div>
                   </div>
-                  <div className="row m-0 mt-3 p-0">
+                  <div className="row m-0 mt-3 p-0 w-100">
                     <Menu
                       closeSideMenu={this.props.closeSideMenu}
                       mobile={true}
                     />
                   </div>
-                  <div className="d-lg-none sb-sidenav-menu-heading">
+                  <div
+                    className="d-lg-none w-100"
+                    style={styles.sideNavMenuHeading}
+                  >
                     Account
                   </div>
-                  <Nav.Link href="/dashboard">
+                  <Nav.Link href="/dashboard" className="m-auto flex-grow-1">
                     <button
-                      className="btn btn-md float-right flex-row m-2 w-100"
+                      className="btn btn-md ml-auto mr-auto m-2 w-100"
                       variant="outline-info"
                       style={styles.mobileLoginButton}
                     >
@@ -91,9 +116,9 @@ class SideMenu extends React.Component {
                   </Nav.Link>
                 </div>
               </div>
-              <div className="sb-sidenav-footer">
+              <div style={styles.sideNavFooter}>
                 <div className="small">Created by:</div>
-                Marcin Królczyk
+                <b>Marcin Królczyk</b>
               </div>
             </nav>
           </div>

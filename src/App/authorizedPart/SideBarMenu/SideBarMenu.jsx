@@ -29,12 +29,12 @@ class SideBarMenu extends React.Component {
           <div className="sb-sidenav-menu">
             <div className="nav">
               <div className="sb-sidenav-menu-heading">Core</div>
-              <a className="nav-link" href="index.html">
+              <Link className="nav-link" to="/dashboard">
                 <div className="sb-nav-link-icon">
                   <FontAwesomeIcon icon={faTachometerAlt}></FontAwesomeIcon>
                 </div>
                 Dashboard
-              </a>
+              </Link>
               <a className="nav-link" href="index.html">
                 <div className="sb-nav-link-icon">
                   <FontAwesomeIcon icon={faCreditCard}></FontAwesomeIcon>
