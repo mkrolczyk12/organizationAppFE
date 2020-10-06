@@ -5,6 +5,18 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const styles = {
+  userButton: {
+    border: "none",
+    ":focus": {
+      outline: "none",
+      outlineOffset: "none",
+      border: "none",
+      boxShadow: "none",
+    },
+  },
+};
+
 class userWindow extends React.Component {
   state = {
     userWindow: false,
@@ -24,9 +36,8 @@ class userWindow extends React.Component {
     return (
       <>
         <DropdownButton
-          id="dropdown-menu-align-right"
           variant=""
-          title={<FontAwesomeIcon icon={faUser} />}
+          title={<FontAwesomeIcon icon={faUser} style={styles.userButton} />}
         >
           <Dropdown.Item eventKey="1" disabled>
             Settings

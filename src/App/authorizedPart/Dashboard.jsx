@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Keycloak from "keycloak-js";
 
+import "./styles.css";
+
 import Navbar from "./Navbar/Navbar";
 import SideBarMenu from "./SideBarMenu/SideBarMenu";
 import MainContent from "./MainContent/MainContent";
@@ -43,13 +45,6 @@ class Dashboard extends Component {
                 handleSideBarMenuDisplay={this.handleSideBarMenuDisplay}
               />
               <div id="layoutSidenav">
-                {/* <SideBarMenu
-                  username={this.state.keycloak
-                    .loadUserInfo()
-                    .then((userInfo) =>
-                      console.log(userInfo.preferred_username)
-                    )}
-                /> */}
                 <SideBarMenu />
                 <MainContent />
               </div>

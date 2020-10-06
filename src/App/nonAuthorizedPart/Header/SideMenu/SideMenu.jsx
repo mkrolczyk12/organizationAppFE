@@ -105,9 +105,9 @@ class SideMenu extends React.Component {
                   >
                     Account
                   </div>
-                  <Nav.Link href="/dashboard" className="m-auto flex-grow-1">
+                  <Nav.Link href="/dashboard" className="m-auto d-flex w-100">
                     <button
-                      className="btn btn-md ml-auto mr-auto m-2 w-100"
+                      className="btn btn-md ml-auto mr-auto m-2 w-100 flex-grow-1"
                       variant="outline-info"
                       style={styles.mobileLoginButton}
                     >

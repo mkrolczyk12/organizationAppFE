@@ -2,6 +2,7 @@ import React from "react";
 import Radium from "radium";
 
 import { Link } from "react-router-dom";
+import "../styles.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,10 +19,15 @@ import {
   faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 
+// const styles = {
+//   layoutSideNav: {
+//     //
+//   },
+// };
 class SideBarMenu extends React.Component {
   render() {
     return (
-      <div id="layoutSidenav_nav">
+      <div id="layoutSidenav_nav" className="overflow-auto">
         <nav
           className="sb-sidenav accordion sb-sidenav-dark"
           id="sidenavAccordion"
@@ -129,7 +135,7 @@ class SideBarMenu extends React.Component {
           </div>
           <div className="sb-sidenav-footer">
             <div className="small">Logged in as:</div>
-            <p>MK</p>
+            MK
           </div>
         </nav>
       </div>

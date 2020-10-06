@@ -5,7 +5,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-// import "./styles.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Radium from "radium";
