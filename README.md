@@ -45,6 +45,7 @@ $ git clone https://github.com/mkrolczyk12/organizationAppFE.git
 2. After successful clone go to project, open terminal and type below command:
 
 ```
+$ `npm install`
 $ `npm start`
 ```
 
